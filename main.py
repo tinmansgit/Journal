@@ -144,7 +144,13 @@ class JournalView:
 
     def _create_main_interface(self):
         log_debug("Painting the interface.")
-        self.root.title("Journal v2.0")
+        self.root.title("Journal")
+        try:
+            icon = tk.PhotoImage(file="journal_icon.png")
+            self.root.iconphoto(False, icon)
+        except Exception as e:
+            log_error(f"Failed to load icon: {e}")
+        
         self.root.geometry("480x665")
         self.root.configure(bg=self.bg_color)
 
