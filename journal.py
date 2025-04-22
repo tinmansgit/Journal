@@ -7,7 +7,7 @@ from json import JSONDecodeError
 import logger_journal
 from logger_journal import log_error, log_debug
 
-ENTRIES_FILE = "entries.json"
+ENTRIES_FILE = "/bin/Python/Journal/entries.json"
 
 class JournalStorage:
     def __init__(self, filename=ENTRIES_FILE):
